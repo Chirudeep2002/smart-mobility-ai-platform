@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+xgboost
+scikit-learn
+imblearn
+joblib
+plotly
+requests
+geopy
+urllib3
+python-dotenv
+matplotlib
+protobuf==3.20.*
