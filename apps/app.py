@@ -857,7 +857,9 @@ if submit:
 
             st.subheader("🧠 AI Confidence")
 
-            st.progress(result["confidence"] / 100)
+            confidence_value = max(0, min(100, float(result["confidence"])))
+
+            st.progress(confidence_value / 100)
 
             st.info(
                 f"Prediction Confidence: {result['confidence']}%"
