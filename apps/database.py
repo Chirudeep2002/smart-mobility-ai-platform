@@ -134,7 +134,7 @@ def save_trip(result):
 
     result["final_mode"],
 
-    result["confidence"],
+    float(result["confidence"]),
 
     str(result.get("alerts", []))
     ))

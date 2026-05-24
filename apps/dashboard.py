@@ -314,7 +314,15 @@ def load_trip_history():
     # -----------------------------------------------------
     # INSIGHT 5
     # -----------------------------------------------------
+    # Convert confidence to numeric
+    # Convert confidence safely
+    df["confidence"] = pd.to_numeric(
+    df["confidence"],
+    errors="coerce"
+    )
 
+    df["confidence"] = df["confidence"].fillna(0)
+    
     avg_confidence = round(
         df["confidence"].mean(),
         2
